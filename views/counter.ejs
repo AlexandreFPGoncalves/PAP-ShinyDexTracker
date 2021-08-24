@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Counter | ShinyDexTracker</title>
+  <meta content="" name="descriptison">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="img/favicon.png" rel="icon">
+  <link href="img/apple-touch-icon.png" rel="apple-touch-icon"> <!-- Arranjar quando a Mariana tiver icon feito -->
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="vendor/icofont/icofont.min.css" rel="stylesheet">
+  <link href="vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="vendor/venobox/venobox.css" rel="stylesheet">
+  <link href="vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="vendor/aos/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+
+  <!-- Ficheiro CSS Principal -->
+  <link href="css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+  <!-- ======= Header ======= -->
+  <header id="header">
+    <div class="container d-flex">
+
+      <div class="logo mr-auto">
+        <h1 class="text-light"><a href="/"><img src="img/Logo_white.png" alt=""> ShinyDexTracker</a></h1> 
+      </div>
+
+      <nav class="nav-menu d-none d-lg-block ">
+        <ul>
+          <li><a href="/"><i class="fas fa-home"></i> Home</a></li>
+          <li><a href="/#about"><i class="fab fa-ethereum"></i> About Us</a></li>
+          <li><a href="/#recentShinies"><i class="fas fa-star"></i> Recent Shinies</a></li>
+          <li><a href="/#socials"><i class="fas fa-comment"></i> Socials</a></li>
+          <% if(isLoged === true){ %> 
+            <li><a href="profile/<%= userName %>"><i class="fas fa-user-circle"></i> Profile</a></li>
+          <% }%> 
+          <li class="drop-down"><a href=""><i class="fas fa-tools"></i> Tools</a>
+            
+            <ul>
+              <li class="active"><a href="counter"><i class="fas fa-calculator"></i> Counter</a></li>
+              <li ><a href="faq"><i class="fas fa-question-circle"></i> F.A.Q</a></li>
+              <li><a href="https://shinybot.dev/"><i class="fas fa-robot"></i> ShinyBot</a></li>
+            </ul>
+            <% if(isLoged === false){ %> 
+              <li><a href="login"><i class="fas fa-sign-in-alt"></i> Login</a></li>
+            <% }else{  %> 
+              <li><a href="logout"><i class="fas fa-sign-in-alt"></i> Logout</a></li>
+              <% } %> 
+          </li>
+        </ul>
+      </nav>
+      <!-- .nav-menu -->
+
+    </div>
+  </header>
+  <!-- End Header -->
+    <!-- ======= Counter Section ======= -->
+    <section class="section">
+      <div class="container">
+          <div class="colums">
+              <div class="column is-half is-offset-one-quarter">
+                  <div class="card">
+                      <div class="card-image">
+                          <figure class="image is-2by-1">
+                    
+                              <img class="counterIMG" src="img/Wallpapers/wallpaper5.png" alt="">
+                          </figure>
+                      </div>
+                      <header class="card-header">
+                        <p class="card-header-title">
+                          Shiny Pokemon Counter 
+                        </p>
+                      </header>
+                      <div class="card-content">
+                        <div class="content">
+                          <input id="display" class="title is-1 inputCounter" name="display" type="number" value="0">
+                          <p class="subtitle">You can press "+" or "-" on your keyboard or click on the buttons to use the counter.</p>
+                      </div>
+                      <footer class="card-footer">
+                          <button id="addButton" class="is-primary button is-medium card-footer-item">+1</button>
+                          <button id="subButton" class="is-info button is-medium card-footer-item">-1</button>
+                          <button id="reset" class="is-danger button is-medium card-footer-item">Reset</button>
+                      </footer>
+                    </div>
+              </div>
+          </div>
+      </div>
+  </section>
+  
+  
+      <!-- End Counter Section -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+
+    <div class="footer-top">
+
+      <div class="container">
+
+        <div class="row  justify-content-center">
+          <div class="col-lg-6">
+            <h3>ShinyDexTracker</h3>
+            <p>The Best Way to Manage and Keep track of your Shiny Pokémon.</p>
+          </div>
+        </div>
+
+        <div class="social-links">
+          <a href="https://twitter.com/VioletAlex_" class="twitter"><i class="bx bxl-twitter"></i></a>
+          <a href="https://www.instagram.com/violetalex_/" class="instagram"><i class="bx bxl-instagram"></i></a>
+          <a href="https://discord.com/invite/rzyVjpZ" class="discord"><i class="fab fa-discord"></i></a>
+          <a href="https://www.twitch.tv/violetalex" class="twitch"><i class="fab fa-twitch"></i></a>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container footer-bottom clearfix">
+      <div class="copyright">
+        &copy; Copyright <strong><span>ShinyDexTracker</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        Made by <a href="https://twitter.com/VioletAlex_">VioletAlex</a>
+      </div>
+    </div>
+  </footer>
+  <!-- End Footer -->
+
+  <a href="#" class="back-to-top"><i class="bx bxs-up-arrow-alt"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="js/counterapp.js"></script>
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="vendor/jquery.easing/jquery.easing.min.js"></script>
+  <script src="vendor/php-email-form/validate.js"></script>
+  <script src="vendor/jquery-sticky/jquery.sticky.js"></script>
+  <script src="vendor/venobox/venobox.min.js"></script>
+  <script src="vendor/waypoints/jquery.waypoints.min.js"></script>
+  <script src="vendor/counterup/counterup.min.js"></script>
+  <script src="vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="vendor/owl.carousel/owl.carousel.min.js"></script>
+  <script src="vendor/aos/aos.js"></script>
+
+  <!-- Main JS File -->
+  <script src="js/main.js"></script>
+
+</body>
+
+</html>

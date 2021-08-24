@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <!-- Required meta tags-->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="Colorlib Templates">
+        <meta name="author" content="Colorlib">
+        <meta name="keywords" content="Colorlib Templates">
+    
+        <title>Edit Shiny | ShinyDexTracker</title>
+    
+        <!-- Favicons -->
+        <link href="../../../img/favicon.png" rel="icon">
+        <link href="../../../img/apple-touch-icon.png" rel="apple-touch-icon"> <!-- Arranjar quando a Mariana tiver icon feito -->
+    
+        <link href="../../../vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+        <!-- Google Fonts -->
+      <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+    
+        <!-- Vendor CSS-->
+        <link href="../../../vendor/select2/select2.min.css" rel="stylesheet" media="all">
+        <link href="../../../vendor/datepicker/daterangepicker.css" rel="stylesheet" media="all">
+    
+        <!-- Main CSS-->
+        <link href="../../../css/addShiny.css" rel="stylesheet" media="all">
+    </head>
+    
+
+<body>
+    <div class="page-wrapper bg-gra-01 p-t-180 p-b-100 font-poppins">
+        
+        <div class="wrapper wrapper--w780">
+            
+            <div class="card card-3">
+                
+                <div class="card-heading"></div>
+                <div class="card-body">
+                    <a  class="closeBTN" href="/../profile/<%= dadosUser.username %>"><i class="fas fa-times"></i></a>
+                    <h2 class="title">Edit a Shiny Pokemon from your Collection!</h2>
+                    
+                    <form action="/profile/<%= dadosUser.username %>/<%= userShinies2._id %>?_method=PUT" method="POST">
+                        
+
+                        <div class="input-group">
+                            <input class="input--style-3" type="text" placeholder="Enter Pokemon Name" name="pokemon_name" value="<%= userShinies2.pokemon_name %>">
+                        </div>
+
+                        <div class="input-group">
+                            <input class="input--style-3" type="text" placeholder="Pick Pokemon Nickname" name="pokemon_nickname" value="<%= userShinies2.pokemon_nickname %>">
+                        </div>
+
+                        <div class="input-group">
+                            <input class="input--style-3" type="number" id="encounters" placeholder="Enter Encounters" name="encounters" value="<%= userShinies2.encounters %>">
+                        </div>
+
+                        <div class="input-group">
+                            <select class="input--style-3 selectStyle"  name="method" value="<%= userShinies2.method %>">
+                                <option value="Catch Combo">Select Hunting Method</option>
+                                <option value="Catch Combo">Catch Combo</option>
+                                <option value="Chain Fishing">Chain Fishing</option>
+                                <option value="Community Day">Community Day</option>
+                                <option value="Dex Battle">Dex Battle</option>
+                                <option value="Dynamax Adventure">Dynamax Adventure</option>
+                                <option value="Eggs Hatched">Eggs Hatched</option>
+                                <option value="Event">Event</option>
+                                <option value="Evolved Pokemon">Evolved Pokemon</option>
+                                <option value="Fishing">Fishing</option>
+                                <option value="Fossil Restores">Fossil Restores</option>
+                                <option value="Friend Safari">Friend Safari</option>
+                                <option value="Horde Encounter">Horde Encounter</option>
+                                <option value="Island Scan">Island Scan</option>
+                                <option value="Masuda Method">Masuda Method</option>
+                                <option value="Poké Pelago">Poke Pelago</option>
+                                <option value="Poké Radar">Poké Radar</option>
+                                <option value="Raid Battle">Raid Battle</option>
+                                <option value="Random Encounters">Random Encounters</option>
+                                <option value="Run Aways">Run Aways</option>
+                                <option value="Soft Resets">Soft Resets</option>
+                                <option value="SoS Method">SoS Method</option>
+                                <option value="Trade">Trade</option>
+                                <option value="Ultra Wormhole">Ultra Wormhole</option>
+                                <option value="Used Game">Used Game</option>
+                                <option value="Wonder Trade">WondBeaster Trade</option>
+                              </select>
+                        </div>
+
+                        <div class="input-group">
+                            <select class="input--style-3 selectStyle"   name="pokeball" value="<%= userShinies2.pokeball %>">
+                                <option value="pokeball">Pick Pokeball</option>
+                                <option value="beastball">Beast Ball</option>
+                                <option value="cherishball">Cherish Ball</option>
+                                <option value="diveball">Dive Ball</option>
+                                <option value="dreamball">Dream Ball</option>
+                                <option value="duskball">Dusk Ball</option>
+                                <option value="fastbll">Fast Ball</option>
+                                <option value="friendball">Friend Ball</option>
+                                <option value="greatball">Great Ball</option>
+                                <option value="healball">Heal Ball</option>
+                                <option value="heavyball">Heavy Ball</option>
+                                <option value="levelball">Level Ball</option>
+                                <option value="loveball">Love Ball</option>
+                                <option value="lureball">Lure Ball</option>
+                                <option value="luxuryball">Luxury Ball</option>
+                                <option value="masterball">Master Ball</option>
+                                <option value="moonball">Moon Ball</option>
+                                <option value="nestball">Nest Ball</option>
+                                <option value="netball">Net Ball</option>
+                                <option value="parkball">Park Ball</option>
+                                <option value="pokeball">Poke Ball</option>
+                                <option value="premierball">Premier Ball</option>
+                                <option value="quickball">Quick Ball</option>
+                                <option value="repeatball">Repeat Ball</option>
+                                <option value="safariball">Safari Ball</option>
+                                <option value="sportball">Sport Ball</option>
+                                <option value="timerball">Timer Ball</option>
+                                <option value="ultraball">Ultra Ball</option>
+                              </select>
+                        </div>
+
+                        <div class="input-group">
+                            <select class="input--style-3 selectStyle" name="caught_game" value="<%= userShinies2.caught_game %>">
+                                <option value="Red">In What Game was the Shiny Caught?</option>
+                                <option value="Let's Go! Pikachu">Let's Go! Pikachu</option>
+                                <option value="Let's Go! Eevee">Let's Go! Eevee</option>
+                                <option value="Pokémon GO">Pokémon GO</option>
+                                <option value="Pokémon Masters">Pokémon Masters</option>
+                                <option value="Pokémon HOME">Pokémon HOME</option>
+                                <option value="Pokémon Mystery Dungeon DX">Pokémon Mystery Dungeon DX</option>
+                                <option value="Pokémon Quest">Pokémon Quest</option>
+                                <option value="Pokémon Rumble">Pokémon Rumble</option>
+                                <option value="Pokémon Colosseum">Pokémon Colosseum</option>
+                                <option value="Pokémon DX: Gale Of Darkness">Pokémon DX: Gale Of Darkness</option>
+                                <option value="Fire Red">Fire Red</option>
+                                <option value="Leaf Green">Leaf Green</option>
+                                <option value="Green">Green</option>
+                                <option value="Red">Red</option>
+                                <option value="Yellow">Yellow</option>
+                                <option value="Gold">Gold</option>
+                                <option value="Silver">Silver</option>
+                                <option value="Crystal">Crystal</option>
+                                <option value="Heart Gold">Heart Gold</option>
+                                <option value="Soul Silver">Soul Silver</option>
+                                <option value="Alpha Sapphire">Alpha Sapphire</option>
+                                <option value="Omega Ruby">Omega Ruby</option>
+                                <option value="Sapphire">Sapphire</option>
+                                <option value="Ruby">Ruby</option>
+                                <option value="Platinum">Platinum</option>
+                                <option value="Pearl">Pearl</option>
+                                <option value="Diamond">Diamond</option>
+                                <option value="White">White</option>
+                                <option value="Black">Black</option>
+                                <option value="White 2">White 2</option>
+                                <option value="Black 2">Black 2</option>
+                                <option value="X">X</option>
+                                <option value="Y">Y</option>
+                                <option value="Sun">Sun</option>
+                                <option value="Moon">Moon</option>
+                                <option value="Ultra Sun">Ultra Sun</option>
+                                <option value="Ultra Moon">Ultra Moon</option>
+                                <option value="Pokémon Sword">Pokémon Sword</option>
+                                <option value="Pokémon Shield">Pokémon Shield</option>
+                              </select>
+                        </div>
+
+                        <div class="input-group">
+                            <select required class="input--style-3 selectStyle"   name="gender" value="<%= userShinies2.gender %>">
+                                <option value="Male">Choose Gender</option>
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                                <option value="Genderless">Genderless</option>
+                              </select>
+                        </div>
+
+                        <div class="input-group">
+                            <select required class="input--style-3 selectStyle"   name="shiny_charm" value="<%= userShinies2.shiny_charm %>">
+                                <option value="0">Did you Use the Shiny Charm?</option>
+                                <option value="1">Yes</option>
+                                <option value="0">No</option>
+                              </select>
+                        </div>
+
+                        <div class="input-group">
+                            <input class="input--style-3" type="date" placeholder="Date" name="date" value="<%= userShinies2.caught_date %>">
+                        </div>
+
+                        <div class="p-t-10">
+                            <button class="btn btn--pill btn--green" type="submit">Edit Shiny</button>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <a href="#" class="back-to-top"><i class="bx bxs-up-arrow-alt"></i></a>
+
+    <!-- Jquery JS-->
+    <script src="../../../vendor/jquery/jquery.min.js"></script>
+    <!-- Vendor JS-->
+    <script src="../../../vendor/select2/select2.min.js"></script>
+    <script src="../../../vendor/datepicker/moment.min.js"></script>
+    <script src="../../../vendor/datepicker/daterangepicker.js"></script>
+
+    <!-- Main JS-->
+    <script src="../../../js/login.js"></script>
+  
+  </body>
+
+</html>
+<!-- end document-->
